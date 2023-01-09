@@ -2,6 +2,9 @@ body{
     font-family: sans-serif;
     display: grid;
 }
+main{
+    margin: auto;
+}
 h1{
     text-align: center;
 }
@@ -16,10 +19,16 @@ form{
 
 .signinform{
     display: block;
+    padding: 5px;
+    outline: auto;
 }
 
 .radio{
     display: inline;
     margin: auto;
     
+}
+
+.task{
+    width: 500px;
 }
