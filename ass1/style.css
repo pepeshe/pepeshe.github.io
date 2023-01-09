@@ -1,0 +1,23 @@
+body{
+    font-family: sans-serif;
+    display: grid;
+}
+h1{
+    text-align: center;
+}
+form{
+    margin: auto;
+}
+.signin{
+    margin: 5px;
+    padding: 3px;
+    display: block;
+}
+
+.signinform{
+    display: block;
+}
+
+.radio{
+    display: inline;
+}
