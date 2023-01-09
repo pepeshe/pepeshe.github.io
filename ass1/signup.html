@@ -10,13 +10,13 @@
 <body>
     <h1>Sign up</h1>
     <form action="tasks.html" class="signinform">
-        <input type="text" name="username" class="signin" placeholder="username">
+        <input type="email" name="email" class="signin" placeholder="email">
         <input type="password" name="pasword" class="signin" placeholder="password">
         <input type="text" name="name" class="signin" placeholder="name">
+        <input type="text" name="username" class="signin" placeholder="username">
         <input type="text" name="address" class="signin" placeholder="address">
         <input type="text" name="country" class="signin" placeholder="country">
         <input type="text" name="zipcode" class="signin" placeholder="zipcode">
-        <input type="email" name="email" class="signin" placeholder="email">
         <div class="signin">
             <p class="radio">male</p>
             <input type="range" name="sex" class="radio" style="position: relative; top: 3px;">
@@ -25,20 +25,24 @@
         <select name="language" class="signin">
             <option value="language" disabled selected hidden>language</option>
             <option value="dutch">dutch</option>
-            <option value="dutch">english</option>
-            <option value="dutch">american</option>
-            <option value="dutch">官话</option>
-            <option value="dutch">pirate</option>
-            <option value="dutch">java</option>
-            <option value="dutch">css</option>
-            <option value="dutch" >french 🥐</option>
-            <option value="dutch">linux 🐧</option>
+            <option value="english">english</option>
+            <option value="english">american</option>
+            <option value="chinese">官话</option>
+            <option value="pirate">pirate</option>
+            <option value="dutch">dutch</option>
+            <option value="java">java</option>
+            <option value="css">css</option>
+            <option value="dutch">dutch</option>
+            <option value="french" >french 🥐</option>
+            <option value="linux">linux 🐧</option>
             <option value="dutch">nederlands</option>
-            <option value="dutch">dutch</option>
-            <option value="dutch">dutch</option>
         </select>
-        <textarea name="about" class="signin" cols="30" rows="10" placeholder="about"></textarea>
-        <button type="submit" class="signin">create account</button>
+        <textarea name="about" class="signin" cols="30" rows="10" placeholder="about" maxlength="256"></textarea>
+        <div class="signin">
+            <p style="margin: 2px; margin-top: 5px; margin-bottom: 3px;">whats your favourite colour?</p>
+            <input type="color" value="#f6f82" id="colorPicker">
+        </div>
+        <button type="submit" class="signin" style="margin-top: 10px;">create account</button>
         <a href="signin.html" class="signin">I have an acount</a>
     </form>
 </body>
