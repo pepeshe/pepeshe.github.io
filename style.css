@@ -1,6 +1,10 @@
 body{
     font-family: sans-serif;
     display: grid;
+    background-image: url("https://i.ytimg.com/vi/yz2-qYBtQ74/mqdefault.jpg");
+    background-position: center;
+    background-repeat:round;
+    background-size: cover;
 }
 main{
     margin: auto;
