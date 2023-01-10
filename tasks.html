@@ -4,21 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>Task Manager - Home</title>
+
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="src/favicon.png"/>
+    <script src="script.js"></script>
+
 </head>
 <body>
+
     <header>
-        <a href="signin.html">Sign in</a>
+        <a href="signin.html">Sign out</a>
     </header>
-    <h1>GSA</h1>
+
+    
     <main>
-        <div class="task">
-            <h3>Taskname</h3>
-            <p>Description text text text Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, soluta dolor! Tempore hic commodi, facilis id labore molestias nulla, reiciendis, accusamus esse blanditiis ex omnis laboriosam suscipit consequatur deleniti? Nostrum!</p>
-            <p>3/12/2023</p>
-            <button onclick="window.open('https://youtu.be/eBGIQ7ZuuiU')">delete</button>
-        </div>
+        <h1>GSA</h1>
+        <ul class="tasks">
+            <li class="task">
+                <div class="task-header"><h3>Taskname</h3> due: 3/12/2020 </div>
+                Description text text text
+                <ul class="targets" id="ts1">
+                    <li id="t1" class="target">Target 1<button id="b1" onclick="done('1', '1')">done</button></li>
+                    <li id="t2" class="target">Target 2<button id="b2" onclick="done('1', '2')">done</button></li>
+                    <li id="t3" class="target">Target 3<button id="b3" onclick="done('1', '3')">done</button></li>
+
+                </ul>
+                <div class="progress">
+                    <div id="p1" class="bar"></div>
+                </div>
+            </li>
+            <li class="task">
+                <div class="task-header"><h3>Taskname</h3> due: 3/12/2020 </div>
+                Description text text text
+                <ul class="targets" id="ts2">
+                    <li id="t4" class="target">Target 1<button id="b4" onclick="done('2', '4')">done</button></li>
+                    <li id="t5" class="target">Target 2<button id="b5" onclick="done('2', '5')">done</button></li>
+                    <li id="t6" class="target">Target 3<button id="b6" onclick="done('2', '6')">done</button></li>
+
+                </ul>
+                <div class="progress">
+                    <div id="p2" class="bar"></div>
+                </div>
+            </li>
+            
+        </ul>
+
     </main>
 </body>
 </html>
