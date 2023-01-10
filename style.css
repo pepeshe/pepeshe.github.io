@@ -8,7 +8,6 @@ body {
 
 main {
     margin: auto;
-    background-color: white;
     padding: 100px;
     padding-top: 50px;
     text-align: center;
@@ -19,25 +18,32 @@ h1 {
     text-align: center;
 }
 
-#index-main {
-    justify-content: center; 
-    display: grid;
-    text-align: center;
-}
 
 form{
     margin: auto;
     background-color: rgba(46, 46, 46, 0.2);
-}
-
-#colorPicker {
-    margin-left: 5px;
+    outline: auto;
+    outline-style: groove;
+    border-radius: 8px;
+    display: grid;
+    width: fit-content;
+    margin-bottom: 5px;
 }
 
 .signin {
     margin: 5px;
     padding: 5px;
     width: 200px;
+}
+
+#index-main {
+    justify-content: center; 
+    display: grid;
+    text-align: center;
+}
+
+#colorPicker {
+    margin-left: 5px;
 }
 
 .tasks {
@@ -61,10 +67,10 @@ form{
     margin-top: 5px;
     width: 100%;
     background-color: #ddd;
-  }
-  
-  .bar {
+}
+
+.bar {
     width: 1%;
     height: 30px;
     background-color: #04AA6D;
-  }
+}

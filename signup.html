@@ -20,22 +20,21 @@
 
         <form action="tasks.html" class="signupform">
 
-            <input type="email" name="email" class="signin" placeholder="E-mail"><br>
-            <input type="password" name="pasword" class="signin" id="p1" placeholder="Password"><br>
-            <input type="password" name="pasword-confirm" class="signin" id="p2" placeholder="Confirm your password"><br>
-            <div class=""><input type="checkbox" onclick="showPassword()">Show Password</div><br>
+            <input type="email" name="email" class="signin" placeholder="E-mail">
+            <input type="password" name="pasword" class="signin" id="p1" placeholder="Password">
+            <input type="password" name="pasword-confirm" class="signin" id="p2" placeholder="Confirm your password">
+            <div class="signin"><input type="checkbox" style="margin: 0px;" onclick="showPassword()">Show Password</div>
 
-            <input type="text" name="name" class="signin" placeholder="Full name"><br>
-            <input type="text" name="username" class="signin" placeholder="Username"><br>
-            <br>
-            <input type="text" name="address" class="signin" placeholder="Address"><br>
-            <input type="text" class="signin" name="country" placeholder="Country"><br>
-            <input type="text" class="signin" name="zipcode" placeholder="ZipCode"><br>
+            <input type="text" name="name" class="signin" placeholder="Full name">
+            <input type="text" name="username" class="signin" placeholder="Username">
+            <input type="text" name="address" class="signin" placeholder="Address">
+            <input type="text" class="signin" name="country" placeholder="Country">
+            <input type="text" class="signin" name="zipcode" placeholder="ZipCode">
             
-            <div>
-                <br>
-                male<input type="range" name="sex">female<br>
-                <br>
+            <div class="signin" style="margin: auto;">
+                <div style="display: flex;">
+                    <p style="width: fit-content; margin: 0px;">male</p> <input type="range" name="sex" style="width: 120px; margin: 0px;"> <p style="width: fit-content; margin: 0px;">female</p> 
+                </div>
             </div>
 
             <select name="language" class="signin">
@@ -52,14 +51,16 @@
                 <option value="french" >french 🥐</option>
                 <option value="linux">linux 🐧</option>
                 <option value="dutch">nederlands</option>
-            </select><br>
+            </select>
 
-            <textarea name="about" class="signin" cols="20" rows="10" placeholder="Tell a little bit about yourself!" maxlength="256"></textarea><br>
+            <textarea name="about" class="signin" cols="20" rows="10" placeholder="Tell a little bit about yourself!" maxlength="256"></textarea>
             
-            Favourite colour<input type="color" value="#f6f82" id="colorPicker"><br>
+            <div class="signin">
+                Favourite colour<input type="color" value="#f6f82" id="colorPicker">
+            </div>
 
-            <button type="submit" class="signin" style="margin-top: 10px;">Create account</button>
-        </form><br>
+            <button type="submit" class="signin" style="margin: auto; margin-block: 10px;">Create account</button>
+        </form>
 
         <a href="signin.html" class="signin">I have an acount</a>
     </main>
