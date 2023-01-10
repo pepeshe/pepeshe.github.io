@@ -25,6 +25,11 @@ h1 {
     text-align: center;
 }
 
+form{
+    margin: auto;
+    background-color: rgba(46, 46, 46, 0.2);
+}
+
 #colorPicker {
     margin-left: 5px;
 }
@@ -37,6 +42,10 @@ h1 {
 
 .tasks {
     text-align: left;
+    outline: auto;
+    outline-width: 3px;
+    outline-style:groove;
+    border-radius: 7px;
 }
 
 .tasks h3 {
