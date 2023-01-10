@@ -14,6 +14,7 @@ h1{
 }
 form{
     margin: auto;
+    background-color: rgba(46, 46, 46, 0.2);
 }
 .signin{
     margin: 5px;
@@ -25,6 +26,9 @@ form{
     display: block;
     padding: 5px;
     outline: auto;
+    outline-width: 3px;
+    outline-style:groove;
+    border-radius: 7px;
 }
 
 .radio{
