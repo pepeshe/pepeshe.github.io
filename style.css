@@ -21,13 +21,16 @@ h1 {
 
 form{
     margin: auto;
-    background-color: rgba(46, 46, 46, 0.2);
-    outline: auto;
-    outline-style: groove;
-    border-radius: 8px;
     display: grid;
     width: fit-content;
     margin-bottom: 5px;
+}
+
+.element{
+    background-color: rgba(255, 255, 255, 0.719);
+    outline: auto;
+    outline-style: groove;
+    border-radius: 8px;
 }
 
 .signin {
