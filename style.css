@@ -19,6 +19,7 @@ h1 {
 }
 
 
+
 form {
     margin: 20px auto;
     background-color: rgba(46, 46, 46, 0.2);
@@ -28,6 +29,13 @@ form {
     display: grid;
     width: fit-content;
     padding: 5px;
+}
+
+.element{
+    background-color: rgba(255, 255, 255, 0.719);
+    outline: auto;
+    outline-style: groove;
+    border-radius: 8px;
 }
 
 .signin {
