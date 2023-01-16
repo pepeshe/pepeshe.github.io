@@ -18,14 +18,9 @@ h1 {
     text-align: center;
 }
 
-
-
 form {
     margin: 20px auto;
     background-color: rgba(46, 46, 46, 0.2);
-    outline: auto;
-    outline-style: groove;
-    border-radius: 8px;
     display: grid;
     width: fit-content;
     padding: 5px;
