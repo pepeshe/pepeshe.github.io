@@ -1,3 +1,3 @@
 # WDT assignment
 
-pepeshe.github.io
+[See our hosted site](pepeshe.github.io)
