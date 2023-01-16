@@ -19,21 +19,33 @@ h1 {
 }
 
 
-form{
-    margin: auto;
+form {
+    margin: 20px auto;
     background-color: rgba(46, 46, 46, 0.2);
     outline: auto;
     outline-style: groove;
     border-radius: 8px;
     display: grid;
     width: fit-content;
-    margin-bottom: 5px;
+    padding: 5px;
 }
 
 .signin {
     margin: 5px;
     padding: 5px;
     width: 200px;
+}
+
+.input {
+    margin: 3px auto;
+    padding: 5px;
+    width: 90%;
+}
+
+#submit {
+    width: 100px;
+    border-radius: 5px;
+    border-width: 0;
 }
 
 #index-main {
