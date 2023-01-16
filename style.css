@@ -67,10 +67,7 @@ p{
 
 .tasks {
     text-align: left;
-    outline: auto;
-    outline-width: 3px;
-    outline-style:groove;
-    border-radius: 7px;
+    margin-bottom: 10px;
 }
 
 .tasks h3 {
