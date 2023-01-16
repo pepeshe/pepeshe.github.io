@@ -26,6 +26,10 @@ form {
     padding: 5px;
 }
 
+p{
+    padding-inline: 10px;
+}
+
 .element{
     background-color: rgba(255, 255, 255, 0.719);
     outline: auto;
