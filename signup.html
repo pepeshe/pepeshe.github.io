@@ -40,7 +40,7 @@
     </script>
 
 </head>
-<body>
+<body style="overflow: hidden;">
     <main>
 
         <h1>Sign up</h1>
@@ -65,7 +65,7 @@
                     <input class="value" required type="range" name="sex" style=" margin: 0px;" id="genderslider"> 
                     <p style="width: fit-content; margin: 0px; padding: 0;">female</p> 
                 </div>
-                <input type="checkbox" name="attack helicopter" id="" onclick="enabledToggle('genderslider')"> attack helicopter
+                <input type="checkbox" name="attack helicopter" id="" onclick="enabledToggle('genderslider'); hideToggle('attackHeli');"> attack helicopter
             </div>
 
             <select required name="language" class="signin value">
@@ -95,5 +95,10 @@
 
         <a href="signin.html" class="signin">I have an acount</a>
     </main>
+
+    <img src="https://i.pinimg.com/originals/7e/d4/a4/7ed4a43576c924b451541a8b755a59f1.gif" alt="attack heli" 
+            style="position: absolute; top: 0px; z-index: -100000; display: none;" class="attackHeli">
+    <img src="https://bestanimations.com/media/helicopters/734573704military-helicopter-animation3.gif" alt="attack heli" 
+            style="position: absolute; top: -150px; left: 800px; z-index: -1000011; display: none; width: 60%; object-fit:contain;" class="attackHeli">
 </body>
 </html>

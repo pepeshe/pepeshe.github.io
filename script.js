@@ -12,6 +12,14 @@ function enabledToggle(elementId){
     el.disabled = el.disabled == true ?false :true
 }
 
+function hideToggle(elementClass){
+    let elements = document.getElementsByClassName(elementClass);
+    for (el of elements) {
+        el.style.display = el.style.display == 'block' ?'none' :'block';
+    }
+
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     var bars = document.getElementsByClassName('bar');
     for (i = 0; i < bars.length; i++) {
