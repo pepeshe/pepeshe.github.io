@@ -9,35 +9,7 @@
     <title>Task Manager - Sign Up</title>
 
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
     <link rel="icon" type="image/png" href="resources/favicon.png"/>
-
-    <script>
-        // Eventlistener to alert the values submitted by the user
-        document.addEventListener('DOMContentLoaded', () => {
-            // Get the signup form and add eventlistener for when submitted
-            document.getElementById("signupform").addEventListener('submit', () => {
-                // Get all fields with input worth mentioning
-                let e = document.getElementsByClassName("value");
-
-                // Start a string (to which will be appended)
-                let s = "YOUR INPUT:\n";
-            
-                // For all inputs, add their name and value
-                for (i = 0; i < e.length; i++) {
-                    // or skip them if null
-                    if (e[i] == null) {
-                        continue;
-                    }
-                    s += `${e[i].name}: ${e[i].value}\n`;
-                }
-                
-                // Alert the created string to the user
-                alert(s);
-                
-            })    
-        })
-    </script>
 
 </head>
 <body style="overflow: hidden;">
@@ -47,10 +19,13 @@
 
         <form action="tasks.html" class="signupform element" id="signupform">
 
-            <input required type="email" name="email" class="signin value" placeholder="E-mail">
+            <input required type="email" name="email" class="signin value" placeholder="E-mail" onchange="validateEmail(this);">
+            <p id="emailInvalid" class="invalid">please enter valid email</p>
 
-            <input required minlength="12" type="password" name="password" class="signin value password" placeholder="Password">
-            <input required minlength="12" required type="password" name="pasword-confirm" class="signin value password" placeholder="Confirm your password">
+            <input required id="password" type="password" name="password" class="signin value password" placeholder="Password" onchange="validatePassword(this);">
+            <p id="passwordLengthInvalid" class="invalid">Password is too short</p>
+            <input required required type="password" name="pasword-confirm" class="signin value password" placeholder="Confirm your password" onchange="validatePasswordEqual(this, document.getElementById('password'));">
+            <p id="passwordNotMatch" class="invalid">Passwords do not match</p>
             <div class="signin"><input type="checkbox" name="passwordshown" style="margin: 0px;" onclick="showPassword()">Show Password</div>
 
             <input required type="text" name="name" class="signin value" placeholder="Full name">
@@ -87,22 +62,23 @@
             <textarea name="about" class="signin value" cols="20" rows="10" placeholder="Tell a little bit about yourself!" maxlength="256"></textarea>
             
             <div class="signin">
-                Favourite colour<input name="favorite_color" type="color" class="value" value="#f6f82" id="colorPicker">
+                Favourite colour<input name="favorite_color" type="color" class="value" value="#b00b69" id="colorPicker">
             </div>
 
             <button type="submit" class="signin" style="margin: auto; margin-block: 10px;">Create account</button>
         </form>
 
         <a href="signin.html" class="signin">I have an acount</a>
-    </main>
 
-    <div>
         <img src="https://i.pinimg.com/originals/7e/d4/a4/7ed4a43576c924b451541a8b755a59f1.gif" alt="attack heli" 
                 style="position: absolute; top: 0px; left: 0px; z-index: -100000; display: none;" class="attackHeli" id="heli">
-    </div>
-    <img src="https://bestanimations.com/media/helicopters/734573704military-helicopter-animation3.gif" alt="attack heli" 
-            style="position: absolute; top: -150px; left: 800px; z-index: -1000011; display: none; width: 60%; object-fit:contain;" class="attackHeli">
+        <img src="https://bestanimations.com/media/helicopters/734573704military-helicopter-animation3.gif" alt="attack heli" 
+                style="position: absolute; top: -150px; left: 800px; z-index: -1000011; display: none; width: 60%; object-fit:contain;" class="attackHeli">
 
+    </main>
+
+    <script src="script.js"></script>
     <script src="heli.js"></script>
+    <script src="signupform.js"></script>
 </body>
 </html>
