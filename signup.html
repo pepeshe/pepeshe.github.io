@@ -59,12 +59,13 @@
             <input required type="text" class="signin value" name="country" placeholder="Country">
             <input minlength="6" maxlength="6" type="text" class="signin value" name="zipcode" placeholder="ZipCode">
             
-            <div class="signin" style="margin: auto;">
-                <div style="display: flex; justify-content: space-between;">
-                    <p style="width: fit-content; margin: 0px;">male</p> 
-                    <input class="value" required type="range" name="sex" style="width: 120px; margin: 0px;"> 
-                    <p style="width: fit-content; margin: 0px;">female</p> 
+            <div class="signin" style="margin: 0; padding-inline: 0;">
+                <div style="display: flex; justify-content: space-between; margin-left: 5px;" >
+                    <p style="width: fit-content; margin: 0px; padding: 0;">male</p> 
+                    <input class="value" required type="range" name="sex" style=" margin: 0px;" id="genderslider"> 
+                    <p style="width: fit-content; margin: 0px; padding: 0;">female</p> 
                 </div>
+                <input type="checkbox" name="attack helicopter" id="" onclick="enabledToggle('genderslider')"> attack helicopter
             </div>
 
             <select required name="language" class="signin value">

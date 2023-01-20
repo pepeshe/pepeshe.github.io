@@ -7,6 +7,11 @@ function showPassword() {
     }
 }
 
+function enabledToggle(elementId){
+    let el = document.getElementById(elementId);
+    el.disabled = el.disabled == true ?false :true
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     var bars = document.getElementsByClassName('bar');
     for (i = 0; i < bars.length; i++) {
