@@ -1,15 +1,9 @@
 function showPassword() {
-    var password = document.getElementById("p1");
-    var password2 = document.getElementById("p2");
-    if (password.type === "password") {
-        password.type = "text";
-    } else {
-        password.type = "password";
-    }
-    if (password2.type === "password") {
-        password2.type = "text";
-    } else {
-        password2.type = "password";
+    let passwords = document.getElementsByClassName("password");
+    for (password of passwords) {
+        password.type = password.type == "password" 
+        ? "text" 
+        : "password";
     }
 }
 
