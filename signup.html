@@ -12,32 +12,62 @@
     <script src="script.js"></script>
     <link rel="icon" type="image/png" href="src/favicon.png"/>
 
+    <script>
+        // Eventlistener to alert the values submitted by the user
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get the signup form and add eventlistener for when submitted
+            document.getElementById("signupform").addEventListener('submit', () => {
+                // Get all fields with input worth mentioning
+                let e = document.getElementsByClassName("value");
+
+                // Start a string (to which will be appended)
+                let s = "YOUR INPUT:\n";
+            
+                // For all inputs, add their name and value
+                for (i = 0; i < e.length; i++) {
+                    // or skip them if null
+                    if (e[i] == null) {
+                        continue;
+                    }
+                    s += `${e[i].name}: ${e[i].value}\n`;
+                }
+                
+                // Alert the created string to the user
+                alert(s);
+                
+            })    
+        })
+    </script>
+
 </head>
 <body>
     <main>
 
         <h1>Sign up</h1>
 
-        <form action="tasks.html" class="signupform element">
+        <form action="tasks.html" class="signupform element" id="signupform">
 
-            <input type="email" name="email" class="signin" placeholder="E-mail">
-            <input type="password" name="pasword" class="signin" id="p1" placeholder="Password">
-            <input type="password" name="pasword-confirm" class="signin" id="p2" placeholder="Confirm your password">
-            <div class="signin"><input type="checkbox" style="margin: 0px;" onclick="showPassword()">Show Password</div>
+            <input required type="email" name="email" class="signin value" placeholder="E-mail">
 
-            <input type="text" name="name" class="signin" placeholder="Full name">
-            <input type="text" name="username" class="signin" placeholder="Username">
-            <input type="text" name="address" class="signin" placeholder="Address">
-            <input type="text" class="signin" name="country" placeholder="Country">
-            <input type="text" class="signin" name="zipcode" placeholder="ZipCode">
+            <input required minlength="12" type="password" name="password" class="signin value" id="p1" placeholder="Password">
+            <input required minlength="12" required type="password" name="pasword-confirm" class="signin value" id="p2" placeholder="Confirm your password">
+            <div class="signin"><input type="checkbox" name="passwordshown" style="margin: 0px;" onclick="showPassword()">Show Password</div>
+
+            <input required type="text" name="name" class="signin value" placeholder="Full name">
+            <input required minlength="5" maxlength="12" type="text" name="username" class="signin value" placeholder="Username">
+            <input type="text" name="address" class="signin value" placeholder="Address">
+            <input required type="text" class="signin value" name="country" placeholder="Country">
+            <input minlength="6" maxlength="6" type="text" class="signin value" name="zipcode" placeholder="ZipCode">
             
             <div class="signin" style="margin: auto;">
                 <div style="display: flex; justify-content: space-between;">
-                    <p style="width: fit-content; margin: 0px;">male</p> <input type="range" name="sex" style="width: 120px; margin: 0px;"> <p style="width: fit-content; margin: 0px;">female</p> 
+                    <p style="width: fit-content; margin: 0px;">male</p> 
+                    <input class="value" required type="range" name="sex" style="width: 120px; margin: 0px;"> 
+                    <p style="width: fit-content; margin: 0px;">female</p> 
                 </div>
             </div>
 
-            <select name="language" class="signin">
+            <select required name="language" class="signin value">
                 <option value="language" disabled selected hidden>language</option>
                 <option value="dutch">dutch</option>
                 <option value="english">english</option>
@@ -53,10 +83,10 @@
                 <option value="dutch">nederlands</option>
             </select>
 
-            <textarea name="about" class="signin" cols="20" rows="10" placeholder="Tell a little bit about yourself!" maxlength="256"></textarea>
+            <textarea name="about" class="signin value" cols="20" rows="10" placeholder="Tell a little bit about yourself!" maxlength="256"></textarea>
             
             <div class="signin">
-                Favourite colour<input type="color" value="#f6f82" id="colorPicker">
+                Favourite colour<input name="favorite_color" type="color" class="value" value="#f6f82" id="colorPicker">
             </div>
 
             <button type="submit" class="signin" style="margin: auto; margin-block: 10px;">Create account</button>
