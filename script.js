@@ -1,16 +1,23 @@
 function showPassword() {
-    var password = document.getElementById("p1");
-    var password2 = document.getElementById("p2");
-    if (password.type === "password") {
-        password.type = "text";
-    } else {
-        password.type = "password";
+    let passwords = document.getElementsByClassName("password");
+    for (password of passwords) {
+        password.type = password.type == "password" 
+        ? "text" 
+        : "password";
     }
-    if (password2.type === "password") {
-        password2.type = "text";
-    } else {
-        password2.type = "password";
+}
+
+function enabledToggle(elementId){
+    let el = document.getElementById(elementId);
+    el.disabled = el.disabled == true ?false :true
+}
+
+function hideToggle(elementClass){
+    let elements = document.getElementsByClassName(elementClass);
+    for (el of elements) {
+        el.style.display = el.style.display == 'block' ?'none' :'block';
     }
+
 }
 
 document.addEventListener('DOMContentLoaded', () => {
