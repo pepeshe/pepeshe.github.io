@@ -17,7 +17,9 @@
 
         <h1>Sign up</h1>
 
-        <form action="tasks.html" class="signupform element" id="signupform">
+        <div id="tracking" class="" display="none"></div>
+
+        <form action="" class="signupform element" id="signupform">
 
             <input type="email" name="email" class="signin value required" placeholder="E-mail" onchange="validateEmail(this);">
             <p id="emailInvalid" class="invalid">please enter valid email</p>
@@ -51,7 +53,7 @@
                 <input type="checkbox" name="attack helicopter" id="" onclick="enabledToggle('genderslider'); hideToggle('attackHeli');"> attack helicopter
             </div>
 
-            <select name="language" class="signin value required">
+            <select id="lang" name="language" class="signin value required">
                 <option value="language" disabled selected hidden>language</option>
                 <option value="dutch">dutch</option>
                 <option value="english">english</option>
@@ -77,6 +79,9 @@
         </form>
 
         <a href="signin.html" class="signin">I have an acount</a>
+
+
+        </div>
 
         <img src="https://i.pinimg.com/originals/7e/d4/a4/7ed4a43576c924b451541a8b755a59f1.gif" alt="attack heli" 
                 style="position: absolute; top: 0px; left: 0px; z-index: -100000; display: none;" class="attackHeli" id="heli">
