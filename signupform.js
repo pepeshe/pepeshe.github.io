@@ -86,3 +86,5 @@ function validateZip(obj){
     document.getElementById("zipInvalid").style.display = input.length == 6 && /^[0-9]*$/.test(input.substring(0,3)) && /^[a-z]*$/i.test(input.substring(4,5)) 
                                                             ?"none" : "block";
 }
+
+//doe zo hier die trakcing fzo
