@@ -90,3 +90,11 @@ p{
     height: 30px;
     background-color: #04AA6D;
 }
+
+.invalid{
+    display: none;
+    text-align: left;
+    margin: 0px;
+    font-size: small;
+    color: red;
+}
