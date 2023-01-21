@@ -68,9 +68,6 @@ function validateForm(){
         s += `${e[i].name}: ${e[i].value}\n`;
     }
     
-    // Alert the created string to the user
-    //alert(s);
-    //document.getElementById("signupform").submit();
 
     // Find end time and compute minutes and seconds (end is in ms)
     let end = Date.now();
@@ -85,6 +82,12 @@ function validateForm(){
 
     // Show the div
     div.style.display = "block";
+
+    // document.getElementById("signupform").submit();
+
+    // Alert the created string to the user
+    alert(s);
+    return false;
 }    
 
 function validateEmail(obj){
