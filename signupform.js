@@ -85,8 +85,8 @@ function validateForm(){
 
 
     // Alert the created string to the user
-    // document.getElementById("signupform").submit();
     alert(s);
+    // document.getElementById("signupform").submit();
     return false;
 }    
 
