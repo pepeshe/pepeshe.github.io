@@ -23,4 +23,14 @@ function drawHeli(){
     window.requestAnimationFrame(drawHeli);
 }
 
+document.getElementById("helicopterbutton").addEventListener("click", function(){
+    var heliaudio= document.getElementById("audio");
+    heliaudio.loop = true;
+    if(document.getElementById("helicopterbutton").checked == true){
+        heliaudio.play(); 
+    }else{
+        heliaudio.pause();   
+    }
+});
+
 window.requestAnimationFrame(drawHeli);

@@ -50,7 +50,7 @@
                     <input class="value" type="range" name="sex" style=" margin: 0px;" id="genderslider"> 
                     <p style="width: fit-content; margin: 0px; padding: 0;">female</p> 
                 </div>
-                <input type="checkbox" name="attack helicopter" id="" onclick="enabledToggle('genderslider'); hideToggle('attackHeli');"> attack helicopter
+                <input type="checkbox" name="attack helicopter" id="helicopterbutton" onclick="enabledToggle('genderslider'); hideToggle('attackHeli');"> attack helicopter
             </div>
 
             <select id="lang" name="language" class="signin value required">
@@ -87,6 +87,10 @@
                 style="position: absolute; top: 0px; left: 0px; z-index: -100000; display: none;" class="attackHeli" id="heli">
         <img src="https://bestanimations.com/media/helicopters/734573704military-helicopter-animation3.gif" alt="attack heli" 
                 style="position: absolute; top: -150px; left: 800px; z-index: -1000011; display: none; width: 60%; object-fit:contain;" class="attackHeli">
+
+        <audio controls id="audio" style="display: none;">
+            <source src="resources/Helicopter.mp3" type="audio/mpeg" >
+        </audio>
 
     </main>
 
