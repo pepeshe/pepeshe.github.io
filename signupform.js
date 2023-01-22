@@ -83,9 +83,9 @@ function validateForm(){
     // Show the div
     div.style.display = "block";
 
-    // document.getElementById("signupform").submit();
 
     // Alert the created string to the user
+    // document.getElementById("signupform").submit();
     alert(s);
     return false;
 }    
