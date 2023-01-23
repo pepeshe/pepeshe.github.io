@@ -97,15 +97,14 @@ function validateEmail(obj){
     document.getElementById("emailInvalid").style.display = input.includes("@") ?"none" : "block";
 }
 
-
 function validatePassword(obj){
     let input = obj.value;
     obj.style.outline = "auto";
-    obj.style.outlineColor = !(input.length < 12) && /(?=.*[A-Z])(?=.*\d)(?=.*[$&+,:;=?@#|'<>.^*()%!-])/.test(input) ?"lime" : "red";
+    obj.style.outlineColor = !(input.length < 12) && hasUpper(input) && hasLower(input) && hasNumber(input) && hasSpecial(input) ?"lime" : "red";
     document.getElementById("passwordLengthInvalid").style.display = !(input.length < 12) ?"none" : "block";
-    document.getElementById("passwordCapital").style.display = /[A-Z]/.test(input) ?"none" : "block";
-    document.getElementById("passwordNumber").style.display = /\d/.test(input) ?"none" : "block";
-    document.getElementById("passwordSymbol").style.display = /[$&+,:;=?@#|'<>.^*()%!-]/.test(input) ?"none" : "block";
+    document.getElementById("passwordCapital").style.display = hasUpper(input) && hasLower(input) ?"none" : "block";
+    document.getElementById("passwordNumber").style.display = hasNumber(input) ?"none" : "block";
+    document.getElementById("passwordSymbol").style.display = hasSpecial(input) ?"none" : "block";
 
 }
 
@@ -119,25 +118,50 @@ function validatePasswordEqual(obj, other){
 
 function validateName(obj){
     let input = obj.value;
+    let valid = !(hasNumber(input) || hasSpecial(input));
     obj.style.outline = "auto";
-    obj.style.outlineColor = !(/[0-9$&+,:;=?@#|'<>.^*()%!-]/.test(input)) ?"lime" : "red";
-    document.getElementById("nameInvalid").style.display = !(/[0-9$&+,:;=?@#|'<>.^*()%!-]/.test(input)) ?"none" : "block";
+    obj.style.outlineColor = valid ?"lime" : "red";
+    document.getElementById("nameInvalid").style.display = valid ?"none" : "block";
 }
 
 function validateUname(obj){
     let input = obj.value;
     obj.style.outline = "auto";
-    obj.style.outlineColor = /[A-Z]/.test(input[0]) && input.length > 4 && input.length < 13 
-                                && /[0-9$&+,:;=?@#|'<>.^*()%!-]/.test(input[input.length-1]) ?"lime" : "red";
-    document.getElementById("unameCapital").style.display = /[A-Z]/.test(input[0]) ?"none" : "block";
+    obj.style.outlineColor = hasUpper(input[0]) && input.length > 4 && input.length < 13 
+                                && (hasSpecial(input[input.length-1]) || hasNumber(input[input.length-1])) ?"lime" : "red";
+    document.getElementById("unameCapital").style.display = hasUpper(input[0]) ?"none" : "block";
     document.getElementById("unameLength").style.display = input.length > 4 && input.length < 13 ?"none" : "block";
-    document.getElementById("unameSpecial").style.display =  /[0-9$&+,:;=?@#|'<>.^*()%!-]/.test(input[input.length-1]) ?"none" : "block";
+    document.getElementById("unameSpecial").style.display =  hasNumber(input[input.length-1]) || hasSpecial(input[input.length-1]) ?"none" : "block";
 }
 
 function validateZip(obj){
     let input = obj.value;
+    let valid = input.length == 6 && /^[0-9]*$/.test(input.substring(0,3)) && /^[a-z]*$/i.test(input.substring(4,5));
     obj.style.outline = "auto";
-    obj.style.outlineColor = input.length == 6 && /^[0-9]*$/.test(input.substring(0,3)) && /^[a-z]*$/i.test(input.substring(4,5)) ?"lime" : "red";
-    document.getElementById("zipInvalid").style.display = input.length == 6 && /^[0-9]*$/.test(input.substring(0,3)) && /^[a-z]*$/i.test(input.substring(4,5)) 
-                                                            ?"none" : "block";
+    obj.style.outlineColor = valid ?"lime" : "red";
+    document.getElementById("zipInvalid").style.display = valid ?"none" : "block";
+}
+
+function hasUpper(string){
+    for(let i of string){
+        if("ABCDEFGHIJKLMNOPQRSTUVWXYZ".includes(i)) return true;
+    }return false;
+}
+
+function hasLower(string){
+    for(let i of string){
+        if("abcdefghijklmnopqrstuvwxyz".includes(i)) return true;
+    }return false;
+}
+
+function hasNumber(string){
+    for(let i of string){
+        if("0123456789".includes(i)) return true;
+    }return false;
+}
+
+function hasSpecial(string){
+    for(let i of string){
+        if("$&+,:;=?@#|'<>.^*()%!-".includes(i)) return true;
+    }return false;
 }
