@@ -93,7 +93,7 @@ function validateForm(){
 function validateEmail(obj){
     let input = obj.value;
     obj.style.outline = "auto";
-    obj.style.outlineColor = input.includes("@") ?"lime" : "red";
+    obj.style.outlineColor = /[@]/.test(input) ?"lime" : "red";
     document.getElementById("emailInvalid").style.display = input.includes("@") ?"none" : "block";
 }
 
