@@ -101,9 +101,9 @@ function validateEmail(obj){
 function validatePassword(obj){
     let input = obj.value;
     obj.style.outline = "auto";
-    obj.style.outlineColor = !(input.length < 12) && /(?=.*[A-Z])(?=.*\d)(?=.*[$&+,:;=?@#|'<>.^*()%!-])/.test(input) ?"lime" : "red";
+    obj.style.outlineColor = !(input.length < 12) && /(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[$&+,:;=?@#|'<>.^*()%!-])/.test(input) ?"lime" : "red";
     document.getElementById("passwordLengthInvalid").style.display = !(input.length < 12) ?"none" : "block";
-    document.getElementById("passwordCapital").style.display = /[A-Z]/.test(input) ?"none" : "block";
+    document.getElementById("passwordCapital").style.display = /(?=.*[A-Z])(?=.*[a-z])/.test(input) ?"none" : "block";
     document.getElementById("passwordNumber").style.display = /\d/.test(input) ?"none" : "block";
     document.getElementById("passwordSymbol").style.display = /[$&+,:;=?@#|'<>.^*()%!-]/.test(input) ?"none" : "block";
 
