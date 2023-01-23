@@ -37,6 +37,20 @@ p{
     border-radius: 8px;
 }
 
+#tracking {
+    background-color: rgba(255, 255, 255, 0.719);
+    display: none;
+    border-color: black;
+    padding: 5px;
+    border-radius: 8px;
+    width: fit-content;
+    margin: 20px auto;
+}
+
+h4 {
+    margin: 5px;
+}
+
 .signin {
     margin: 5px;
     padding: 5px;
