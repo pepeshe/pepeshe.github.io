@@ -35,13 +35,13 @@
 
             <input type="text" name="name" class="signin value required" placeholder="Full name" onchange="validateName(this);">
             <p id="nameInvalid" class="invalid">Must not contain numbers <br> or special characters</p>
-            <input maxlength="12" type="text" name="username" class="signin value required" placeholder="Username" onchange="validateUname(this)">
+            <input type="text" name="username" class="signin value required" placeholder="Username" onchange="validateUname(this)">
             <p id="unameCapital" class="invalid">Must start with a capital</p>
             <p id="unameLength" class="invalid">Must be between 5-12 characters</p>
             <p id="unameSpecial" class="invalid">Must end with a number or characters</p>
             <input type="text" class="signin value" name="address" placeholder="Address">
             <input type="text" class="signin value required" name="country" placeholder="Country" onchange="this.style.outline = 'auto'; this.style.outlineColor = 'lime';">
-            <input maxlength="6" type="text" class="signin value" name="zipcode" placeholder="ZipCode" onchange="validateZip(this)">
+            <input type="text" class="signin value" name="zipcode" placeholder="ZipCode" onchange="validateZip(this)">
             <p id="zipInvalid" class="invalid">Please enter valid zipcode</p>
             
             <div class="signin" style="margin: 0; padding-inline: 0;">
