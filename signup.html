@@ -19,41 +19,29 @@
 
         <div id="tracking"></div>
 
-        <form onsubmit="" class="signupform element" id="signupform">
+        <form class="signupform element" id="signupform">
 
-            <input type="email" name="email" class="signin value required" placeholder="E-mail" onchange="validateEmail(this);">
-            <p id="emailInvalid" class="invalid">please enter valid email</p>
-
-            <input id="password" type="password" name="password" class="signin value password required" placeholder="Password" onchange="validatePassword(this);">
-            <p id="passwordLengthInvalid" class="invalid">Must be at least 12 letters</p>
-            <p id="passwordCapital" class="invalid">Must contain a capital <br> and lower case letter</p>
-            <p id="passwordNumber" class="invalid">Must contain number</p>
-            <p id="passwordSymbol" class="invalid">Must contain special symbol</p>
-            <input type="password" name="pasword-confirm" class="signin value password required" placeholder="Confirm your password" onchange="validatePasswordEqual(this, document.getElementById('password'));">
-            <p id="passwordNotMatch" class="invalid">Passwords do not match</p>
+            <input required  type="email" name="email" class="signin value required" placeholder="E-mail">
+            <input required minlength="12" id="password" type="password" name="password" class="signin value password required" placeholder="Password">
+            <input required minlength="12" type="password" name="pasword-confirm" class="signin value password required" placeholder="Confirm your password">
             <div class="signin"><input type="checkbox" name="passwordshown" style="margin: 0px;" onclick="showPassword()">Show Password</div>
 
-            <input type="text" name="name" class="signin value required" placeholder="Full name" onchange="validateName(this);">
-            <p id="nameInvalid" class="invalid">Must not contain numbers <br> or special characters</p>
-            <input maxlength="12" type="text" name="username" class="signin value required" placeholder="Username" onchange="validateUname(this)">
-            <p id="unameCapital" class="invalid">Must start with a capital</p>
-            <p id="unameLength" class="invalid">Must be between 5-12 characters</p>
-            <p id="unameSpecial" class="invalid">Must end with a number or characters</p>
+            <input required type="text" name="name" class="signin value required" placeholder="Full name">
+            <input required minlength="5" maxlength="12" type="text" name="username" class="signin value required" placeholder="Username">
             <input type="text" class="signin value" name="address" placeholder="Address">
-            <input type="text" class="signin value required" name="country" placeholder="Country" onchange="this.style.outline = 'auto'; this.style.outlineColor = 'lime';">
-            <input maxlength="6" type="text" class="signin value" name="zipcode" placeholder="ZipCode" onchange="validateZip(this)">
-            <p id="zipInvalid" class="invalid">Please enter valid zipcode</p>
+            <input required type="text" class="signin value required" name="country" placeholder="Country">
+            <input maxlength="6" type="text" class="signin value" name="zipcode" placeholder="ZipCode">
             
             <div class="signin" style="margin: 0; padding-inline: 0;">
                 <div style="display: flex; justify-content: space-between; margin-left: 5px;" >
                     <p style="width: fit-content; margin: 0px; padding: 0;">male</p> 
-                    <input class="value" type="range" name="sex" style=" margin: 0px;" id="genderslider"> 
+                    <input required class="value" type="range" name="sex" style=" margin: 0px;" id="genderslider"> 
                     <p style="width: fit-content; margin: 0px; padding: 0;">female</p> 
                 </div>
                 <input type="checkbox" name="attack helicopter" id="helicopterbutton" onclick="enabledToggle('genderslider'); hideToggle('attackHeli');"> attack helicopter
             </div>
 
-            <select id="lang" name="language" class="signin value required">
+            <select required id="lang" name="language" class="signin value required">
                 <option value="language" disabled selected hidden>language</option>
                 <option value="dutch">dutch</option>
                 <option value="english">english</option>
@@ -75,7 +63,7 @@
                 Favourite colour<input name="favorite_color" type="color" class="value" value="#b00b69" id="colorPicker">
             </div>
 
-            <button type="button" class="signin" onclick="validateForm();" style="margin: auto; margin-block: 10px;">Create account</button>
+            <button type="submit" class="signin" style="margin: auto; margin-block: 10px;">Create account</button>
         </form>
 
         <a href="signin.html" class="signin">I have an acount</a>
